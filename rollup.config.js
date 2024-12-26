@@ -1,22 +1,19 @@
 import { defineConfig } from 'rollup';
+import styles from 'rollup-plugin-styles';
 
 export default defineConfig( {
   input: 'src/index.js',
   output: {
-    file: 'dist/index.js',
+    file: 'dist/rollup.js',
     format: 'es',
+    sourcemap: true,
+    assetFileNames: '[name][extname]'
   },
   plugins: [
-    {
-      name: 'Plugin',
-      writeBundle ( { dir, file }, bundle ) {
-        console.log( {
-          bundler: 'Rollup',
-          dir,
-          file,
-          bundles: Object.keys( bundle ),
-        } );
-      },
-    },
-  ],
+    styles( {
+      mode: 'extract',
+      sourceMap: true,
+      minimize: true
+    } )
+  ]
 } );

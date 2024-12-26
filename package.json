@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "rolldown": "^1.0.0-beta.1",
-    "rollup": "^4.29.1"
+    "rollup": "^4.29.1",
+    "rollup-plugin-styles": "^4.0.0"
   }
 }
