@@ -1,0 +1,12 @@
+{
+  "name": "repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c && rolldown -c"
+  },
+  "dependencies": {
+    "rolldown": "^1.0.0-beta.1",
+    "rollup": "^4.29.1"
+  }
+}
